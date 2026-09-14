@@ -43,6 +43,9 @@ export default {
     isCompleted(task) {
       return task.completed;
     },
+    clearCompleted() {
+      this.tasks = this.tasks.filter(this.inProgress);
+    },
     clearAll() {
       this.tasks = [];
     }
