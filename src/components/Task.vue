@@ -7,7 +7,7 @@
       </div>
       <!-- form -->
       <div class="form">
-        <input type="text" placeholder="New Task" v-model="newTask"/>
+        <input type="text" placeholder="New Task" v-model="newTask" @keyup.enter="addTask" />
         <button @click="addTask"><i class="fas fa-plus"></i></button>
       </div>
       <!-- task lists -->
