@@ -14,7 +14,7 @@
       <div class="taskItems">
         <ul>
           <li v-for="task in tasks" :key="task.id">
-            <button>Walk Dog</button>
+            <button>{{task.title}}</button>
             <button><i class="far fa-trash-alt"></i></button>
           </li>
         </ul>
