@@ -26,7 +26,7 @@
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
-        <span>Pending Tasks: </span>
+        <span>Pending Tasks: {{ incomplete }}</span>
       </div>
     </div>
   </div>
