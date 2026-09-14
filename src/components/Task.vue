@@ -37,6 +37,9 @@ export default {
   name: "Task",
   props: ['tasks'],
   methods: {
+    inProgress(task) {
+      return !this.isCompleted(task);
+    },
     isCompleted(task) {
       return task.completed;
     },
