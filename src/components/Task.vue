@@ -37,6 +37,9 @@ export default {
   name: "Task",
   props: ['tasks'],
   methods: {
+    isCompleted(task) {
+      return task.completed;
+    },
     clearAll() {
       this.tasks = [];
     }
