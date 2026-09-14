@@ -22,7 +22,7 @@
       <!-- buttons -->
       <div class="clearBtns">
         <button>Clear completed</button>
-        <button>Clear all</button>
+        <button @click="clearAll">Clear all</button>
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
@@ -36,5 +36,10 @@
 export default {
   name: "Task",
   props: ['tasks'],
+  methods: {
+    clearAll() {
+      this.tasks = [];
+    }
+  },
 };
 </script>
