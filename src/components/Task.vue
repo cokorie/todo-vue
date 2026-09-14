@@ -21,7 +21,7 @@
       </div>
       <!-- buttons -->
       <div class="clearBtns">
-        <button>Clear completed</button>
+        <button @click="clearCompleted">Clear completed</button>
         <button @click="clearAll">Clear all</button>
       </div>
       <!-- pending task -->
@@ -36,6 +36,11 @@
 export default {
   name: "Task",
   props: ['tasks'],
+  computed: {
+    incomplete() {
+      return this.tasks.filter(this.inProgress).length;
+    }
+  },
   methods: {
     inProgress(task) {
       return !this.isCompleted(task);
