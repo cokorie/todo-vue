@@ -1,6 +1,6 @@
 <template>
     <li>
-        <button v-bind:class="className"><i class="far fa-circle"></i>{{task.title}}</button>
+        <button @click="$emit('completed')" v-bind:class="className"><i class="far fa-circle"></i>{{task.title}}</button>
         <button @click="$emit('remove')"><i class="far fa-trash-alt"></i></button>
     </li>
 </template>

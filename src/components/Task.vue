@@ -13,7 +13,7 @@
       <!-- task lists -->
       <div class="taskItems">
         <ul>
-          <TaskItem v-bind:task="task" v-for="(task, index) in tasks" :key="task.id" @remove="removeTask(index)">
+          <TaskItem v-bind:task="task" v-for="(task, index) in tasks" :key="task.id" @remove="removeTask(index)" @completed="completeTask(task)">
           </TaskItem>
         </ul>
       </div>
@@ -73,6 +73,9 @@ export default {
     },
     removeTask(index) {
       this.tasks.splice(index, 1);
+    },
+    completeTask(task) {
+      task.completed = !task.completed;
     }
   },
 };
