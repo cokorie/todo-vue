@@ -43,5 +43,6 @@
 <script>
 export default {
   name: "Task",
+  props: ['tasks'],
 };
 </script>
