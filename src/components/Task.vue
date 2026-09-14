@@ -13,16 +13,8 @@
       <!-- task lists -->
       <div class="taskItems">
         <ul>
-          <li>
+          <li v-for="task in tasks" :key="task.id">
             <button>Walk Dog</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
-          <li>
-            <button>Read Book</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
-          <li>
-            <button>Grocery Shopping</button>
             <button><i class="far fa-trash-alt"></i></button>
           </li>
         </ul>
