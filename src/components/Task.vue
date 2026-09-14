@@ -13,10 +13,8 @@
       <!-- task lists -->
       <div class="taskItems">
         <ul>
-          <li v-for="task in tasks" :key="task.id">
-            <button><i class="far fa-circle"></i>{{task.title}}</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
+          <TaskItem v-bind:task="task" v-for="task in tasks" :key="task.id">
+          </TaskItem>
         </ul>
       </div>
       <!-- buttons -->
@@ -33,9 +31,14 @@
 </template>
 
 <script>
+import TaskItem from './TaskItem';
+
 export default {
   name: "Task",
   props: ['tasks'],
+  components: {
+    TaskItem
+  },
   data() {
     return {
       newTask: "",
