@@ -18,12 +18,12 @@ export default {
         {
           id: 1,
           title: "Walk Dog",
-          completed: true,
+          completed: false,
         },
         {
           id: 2,
           title: "Read Book",
-          completed: true,
+          completed: false,
         },
         {
           id: 3,
